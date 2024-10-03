@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Skin Disease Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload an Image</h1>
+        <form action="{{ url_for('predict') }}" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/*" required> <!-- Added accept attribute for image files -->
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Skin Disease Detector. All rights reserved.</p>
+    </footer>
+</body>
+</html>
